@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Borel', cursive;
+   
+}
+
+nav{
+    background: rgb(51, 46, 46);
+    font-family: 'Borel', cursive;
+}
+
+main{
+    /* background: black; */
+    font-family: 'Borel', cursive;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.form{
+    /* display: none; */
+    box-shadow: 5px 5px 25px 5px gray;
+}
+.form .form-body input{
+    border: none;
+    box-shadow: 2px 2px 10px 2px gray;
+    margin-left: 7.5%;
+}
+.form button{
+    background: #ae0060;
+    margin-left: 20%;
+}
+
+.form-body, .display{
+    color: #ae0060;
+}
+
+input{
+    color: #ae0060;
+    text-align: center;
+    padding: 0.5em ;
+}
+
+.form-expense{
+    display: none;
+    box-shadow: 5px 5px 25px 5px gray;
+    margin-top: 5.5%;
+}
+
+.form-expense .form-body input{
+    border: none;
+    box-shadow: 2px 2px 10px 2px gray;
+    margin-left: 25%;
+}
+
+
+.form-expense .btn{
+    margin-left: 20%;
+    background: #ae0060;
+}
+
+.display{
+    box-shadow: 5px 5px 25px 5px gray;
+}
+
+.display .dis1-head{
+    /* border: 1px solid black; */
+    margin-top: 2em;
+    text-align: center;
+}
+
+.dis1-body, .dis2-body, .dis3-body{
+    box-shadow: 2px 2px 10px 2px gray;
+}
+
+li{
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+}
+
+li div{
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-evenly;
+    width: 6em;
+}
+
+li div button{
+    background: white;
+    border: none;
+}
+
+    
