@@ -18,9 +18,9 @@
         </div>
     </nav>
 
-    <main class="">
+    <main class=" row">
         <!-- Start of Form Income -->
-        <div id="frm" class="form rounded-end-5 mt-5" style="width: 40%; height: fit-content;" >
+        <div id="form" class="form rounded-end-5 mt-5" style="width: 40%; height: fit-content;" >
             <div class="form-head pt-4 text-center " style="color: #ae0060;"><h3>Income :</h3></div>
             <div class="form-body ps-3">
                 <label for="" class="col-12 mt-2 text-center">Basic income :</label>
@@ -32,16 +32,16 @@
                 <label for="" class="col-12 mt-2 text-center">Other income :</label>
                 <input type="text" class="col-10 rounded-3" id="inp4">
             </div>
-            <div class="form-btn d-flex">
-                <button onclick="submit()" id="sub" class="sub m-auto mb-3 mt-5 p-3 rounded-4 fs-4 fw-bolder" style="width: 30%;">Submit</button>
-                <button onclick="clr()" id="rst" class="rst m-auto mb-3 mt-5 p-3 rounded-4 fs-4 fw-bolder placeholder-wave" style="width: 30%;">Reset</button>
-                <button onclick="next()" id="nxt" class="nxt m-auto mb-3 mt-5 p-3 rounded-4 fs-4 fw-bolder" style="width: 30%;">Expenses</button>
+            <div class="form-btn d-flex row">
+                <button onclick="submit()" id="sub" class="sub m-auto mb-3 mt-5 rounded-4 fw-bolder" style="width: 30%;">Submit</button>
+                <button onclick="clr()" id="rst" class="rst m-auto mb-3 mt-5 rounded-4 fw-bolder placeholder-wave" style="width: 30%;">Reset</button>
+                <button onclick="next()" id="nxt" class="nxt m-auto mb-3 mt-5 rounded-4 fw-bolder">Expenses</button>
             </div>
             
         </div>
         <!-- End of Form Income -->
         <!-- Start of Form Expenses -->
-        <div id="frm-exp" class="form-expense rounded-end-5" style="width: 40%; height: fit-content;" >
+        <div id="form-exp" class="form-expense rounded-end-5 mt-5" style="width: 40%; height: fit-content;" >
             <div class="form-head pt-4 text-center " style="color: #ae0060;"><h3>Input Expense :</h3></div>
             <div class="form-body ps-3">
                 <label for="" class="col-12 mt-2 text-center">Title :</label>
@@ -50,8 +50,8 @@
                 <input type="text" class="col-6 rounded-3" id="inp6">
             </div>
             <div class="frm-expBtn d-flex">
-                <button onclick="subt()" class="sbt p-3 rounded-4 fw-bolder m-auto mt-5 mb-5 fs-4 fw-bolder placeholder-wave" style="width: 30%;">Submit</button>
-                <button onclick="rest()" class="rest border border-none p-3 rounded-4 fw-bolder m-auto mt-5 mb-5 fs-4 fw-bolder" style="width: 30%;">Restart</button>
+                <button onclick="subt()" class="sbt rounded-4 fw-bolder m-auto mt-5 mb-5 fw-bolder placeholder-wave">Submit</button>
+                <button onclick="rest()" class="rest border border-none rounded-4 fw-bolder m-auto mt-5 mb-5 fw-bolder">Restart</button>
             </div>
            
         </div>
@@ -67,16 +67,10 @@
                 <div id="dis2" class="dis2-body col-10 m-auto rounded-3 text-center pt-3 fs-4 fw-bolder" style="height: 2em;"></div>
             </div>
             <div id="display3" class="pt-4">
-                <div class="dis3-head text-center"><h3>Details :</h3></div>
-                <div id="dis3" class="dis3-body m-auto mb-4 col-11 rounded-3 pt-4" style="height: fit-content;">
-                    <ul>
-                        <!-- <li>ssdfghjkjhgfdsdfgh <div><button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ae0060" class="bi bi-pencil" viewBox="0 0 16 16">
-                            <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
-                          </svg></button><button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ae0060" class="bi bi-trash3-fill" viewBox="0 0 16 16">
-                            <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z"/>
-                          </svg></button></div></li>
-                        <li>2000</li>
-                        <li>sdfghjk</li> -->
+                <div class="dis3-head text-center" id="dis3H"><h3>Details :</h3></div>
+                <div id="dis3" class="dis3-body m-auto mb-4 col-11 rounded-3 pt-2" style="height: fit-content;">
+                    <ul id="dis3List">
+                        
                     </ul>
                 </div>
             </div>

@@ -29,7 +29,7 @@ nav{
 }
 
 main{
-    /* background: black; */
+    
     font-family: 'Borel', cursive;
     width: 100%;
     height: 100%;
@@ -38,7 +38,7 @@ main{
 }
 
 .form{
-    /* display: none; */
+    
     box-shadow: 5px 5px 25px 5px gray;
     animation: 2s slide-right ease-in-out;
 }
@@ -63,11 +63,14 @@ main{
 .form button{
     border: none;
     background: #ae0060;
-    /* margin-left: 20%; */
+    font-size: 2em;
+    padding-top: 1em;
+    width: 30%;
+    
 }
 
 .form .sub{
-    /* display: none; */
+   
     animation: appear 1s ease-in;    
 }
 
@@ -89,6 +92,7 @@ main{
 .form .nxt{
     background: #ae0060;
     display: none;
+    width: 32%;
     animation: sharawa 1s ease-in-out;
 }
 
@@ -138,9 +142,18 @@ input{
 
 .form-expense .sbt{
     border: none;
-    margin-left: 20%;
+    /* margin-left: 20%; */
     background: rgb(51, 46, 46);
     color: #ae0060;
+    font-size: 2em;
+    padding-top: 1em ;
+    width: 30%;
+}
+
+.form-expense .rest{
+    font-size: 2em;
+    padding-top: 1em;
+    width: 30%;
 }
 
 .display{
@@ -160,7 +173,7 @@ input{
 
 
 .display .dis1-head{
-    /* border: 1px solid black; */
+    
     margin-top: 2em;
     text-align: center;
     
@@ -172,27 +185,65 @@ input{
     
 }
 
-.dis3-head, .dis3-body{
-    display: none;
-}
-
 li{
-    /* border: 1px solid black; */
+
     display: flex;
     justify-content: space-between;
-    width: 95%;
+    width: 90%;
+    margin-left: 1.5em;
+    padding: 0.5em 0;
+    
 }
 
 li div{
-    /* border: 1px solid black; */
+    font-weight: bolder;
+    width: 40%;
     display: flex;
     justify-content: space-evenly;
-    width: 6em;
 }
 
 li div button{
-    background: white;
     border: none;
+    border-radius: 0.5em;
+    box-shadow: 1px 1px 10px 1px black;
+    font-weight: 900;
+    padding-top: 0.5em;
+    width: 4em;
+    height: 2.5em;
 }
-
     
+@media only screen and (max-width: 768px){
+    .form button{
+        font-size: 0.8em;
+    }
+
+    .form-btn .rst{
+        font-size: 0.8em;
+    }
+    .form-btn .nxt{
+        width: fit-content;
+    }
+
+    .form-expense .sbt{
+        font-size: 0.8em;
+    }
+
+    .form-expense .rest{
+        font-size: 0.8em;
+    }
+
+    li{
+        margin: 0.2em;
+        width: 96%;
+    }
+
+    li div{
+        display: flex;
+        justify-content: space-evenly;
+        width: 40%;
+    }
+
+    li div button{
+        font-size: 0.5em;
+    }
+}    

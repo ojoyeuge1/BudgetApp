@@ -1,25 +1,19 @@
 
 
-let form = document.getElementById("frm");
-let formExp = document.getElementById("frm-exp");
+let form = document.getElementById("form");
+let formExp = document.getElementById("form-exp");
 let sub = document.getElementById("sub");
 let clear = document.getElementById("rst");
 let exp = document.getElementById("nxt");
-let details = document.createElement("list");
-details.setAttribute("id", "dis3-body");
-let dvBtn = document.createElement("div")
-let btnEdit = document.createElement("button")
-let btnDel = document.createElement("button")
-dvBtn.append(btnEdit)
-dvBtn.appendChild(btnDel)
+
 
 
 
 
 const submit=()=>{
     let totalIncome = eval(Number(document.getElementById("inp1").value) + Number(document.getElementById("inp2").value) + Number(document.getElementById("inp3").value) + Number(document.getElementById("inp4").value))
-    document.getElementById("dis1").innerHTML = "NGN " + totalIncome;
-    document.getElementById("dis2").innerHTML = "NGN " + 0;
+    document.getElementById("dis1").innerHTML = totalIncome;
+    document.getElementById("dis2").textContent = 0
     sub.style.display = "none";    
     exp.style.display = "block"
        
@@ -43,31 +37,39 @@ const next=()=>{
     form.style.display = "none";
     formExp.style.display = "block"
 }
+let liBtn = document.createElement("div")
+let btn1 = document.createElement("button");
+let btn1txt = document.createTextNode("edit");
+btn1.appendChild(btn1txt);
+let btn2 = document.createElement("button");
+let btn2txt = document.createTextNode("del")
+btn2.appendChild(btn2txt)
+liBtn.appendChild(btn1)
+liBtn.appendChild(btn2)
 
-const subt=()=>{
-    let totalIncome = eval(Number(document.getElementById("inp1").value) + Number(document.getElementById("inp2").value) + Number(document.getElementById("inp3").value) + Number(document.getElementById("inp4").value))
-    let expense = Number(document.getElementById("inp6").value)
-    document.getElementById("dis2").innerHTML = "NGN " + eval(totalIncome - expense)
+const subt =()=>{
+    let total = document.getElementById("dis1").textContent;
+    let expense = document.getElementById("inp6").value;
+    document.getElementById("dis2").textContent = eval(Number(total) - Number(expense));
+    let details = document.getElementById("dis3");
+    let list = document.createElement("li");
+    let tit = document.createTextNode(document.getElementById("inp5").value);
+    let sig = document.createTextNode(" - ");
+    let amt = document.createTextNode(document.getElementById("inp6").value);
+    list.appendChild(tit)
+    list.appendChild(sig)
+    list.appendChild(amt)
+    list.appendChild(liBtn)
+    details.appendChild(list)
+    document.getElementById("inp5").value = " "
+    document.getElementById("inp6").value = " "   
 }
 
 const rest=()=>{
     document.getElementById("dis1").innerHTML = " ";
     document.getElementById("dis2").innerHTML = " ";
+    document.getElementById("dis3").innerHTML = " ";
     form.style.display = "block";
     formExp.style.display = "none"
 
 }
-
-// var disHead = document.createElement("div");
-// var headText = document.createElement("h3");
-// var textHead = document.createTextNode("Total Income :");
-// headText.appendChild(textHead);
-// disHead.appendChild(headText);
-// disHead.setAttribute("class", "dis1-head");
-// document.querySelector("#dis").appendChild(disHead);
-// var dis1Inp = document.createElement("div")
-// dis1Inp.setAttribute("class", "dis1-body")
-// dis1Inp.setAttribute("id", "dis1")
-// document.querySelector("#dis").appendChild(dis1Inp)
-
-// console.log(headText)
